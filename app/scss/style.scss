@@ -1,3 +1,5 @@
+@import 'libs';
+
 $default:#7b7b7b;
 
 
@@ -100,6 +102,7 @@ body{
   font-size: 36px;
   color: #000;
   margin-bottom: 40px;
+  text-align: center;
 }
 .main{
   flex-grow: 1;
@@ -516,4 +519,90 @@ body{
   color: #a3bbc8;
   line-height: 40px;
   margin-bottom: 30px;
+}
+.video{
+  width: 100%;
+  background: url(../img/video-bg.jpg) center center/ cover no-repeat;
+  margin-bottom: 115px;
+  &__popup{
+    height: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.blog{
+  &area__title{
+    margin: 0;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__link{
+    @extend %dmsans-700;
+    font-size: 16px;
+    color:#262626;
+    span{
+      margin-left: 15px;
+    }
+  }
+
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 420px;
+    grid-gap: 30px;
+    margin-bottom: -170px;
+  }
+  &__item{
+    background: #fff;
+  }
+  &__title{
+    p{
+    margin: 0 30px;
+    padding: 35px 0 15px 0;
+    @extend %dmsans-500;
+    font-size: 18px;
+    color: #262626;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    }
+  }
+  &__footer{
+    margin: 0 30px 25px 30px;
+    @extend %rubik-400; 
+    font-size: 12px;
+    color: #222933;
+    span + span{
+      margin-left: 30px;
+    }
+  }
+  &__meta{
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    padding: 8px 30px;
+    border-radius: 20px;
+    background: #a3bbc8;
+    text-transform: uppercase;
+    @extend %dmsans-700;
+    font-size: 14px;
+    color: #fff;
+  }
+  &__content{
+    position: relative;
+  }
+}
+.brand{
+  background: #fef7f0;
+  &__list{
+    padding: 250px 0 80px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
