@@ -37,21 +37,21 @@ function productChoice(self){
     product.css('display','block');
   }
 }
-var product = $('.design__item');
+var design = $('.design__item');
  
-$('#choice > .choice-item').click(
+$('#choice-design > .choice-item-design').click(
 function(){
-  productChoice($(this));
+  designChoice($(this));
 });
  
-function productChoice(self){
-  self.siblings().removeClass('choice-active');
-  self.addClass('choice-active');
-  var productCategory = self.attr('data-choice');
-  if(productCategory != 'all'){
-    product.map(
+function designChoice(self){
+  self.siblings().removeClass('choice-active-design');
+  self.addClass('choice-active-design');
+  var designCategory = self.attr('data-choice');
+  if(designCategory != 'all'){
+    design.map(
       function(){
-        if($(this).attr('data-category') === productCategory){
+        if($(this).attr('data-category') === designCategory){
           $(this).css('display','block');
         }
         else{
@@ -61,6 +61,6 @@ function productChoice(self){
     );
   }
   else{
-    product.css('display','block');
+    design.css('display','block');
   }
 }
