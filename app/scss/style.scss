@@ -124,7 +124,8 @@ body{
 .menu__list{
   display: flex;
   @extend %rubik-500;
-    font-size: 15px;
+  font-size: 15px;
+  color: #436372;
   &-item + .menu__list-item{
     margin-left: 30px;
   }
@@ -200,6 +201,9 @@ body{
     text-transform: uppercase;
     color: #1f2044;
   }
+  &__link{
+    color: $default;
+  }
 }
 .footer-top__form{
   @extend %dmsans-700;
@@ -229,6 +233,9 @@ body{
   color: $default;
   &__list{
     display: flex;
+    a{
+      color: $default;
+    }
   }
   &__item + .footer-bottom__item{
     padding-left: 15px;
@@ -333,8 +340,13 @@ body{
   background: none;
   cursor: pointer;
   color: #8b8b8b;
-  &:hover,&:active{
+  &:hover{
     color: #1a1a1a;
+  }
+}
+li.choice-active{
+  button{
+    color:#191919
   }
 }
 .products__menu-item + .products__menu-item{
@@ -477,8 +489,13 @@ body{
   background: none;
   cursor: pointer;
   color: #8b8b8b;
-  &:hover,&:active{
+  &:hover{
     color: #1a1a1a;
+  }
+}
+li.choice-active-design{
+  button{
+    color:#191919
   }
 }
 .design__menu-item + .design__menu-item{
