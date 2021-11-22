@@ -64,3 +64,4 @@ function designChoice(self){
     design.css('display','block');
   }
 }
+/**/
